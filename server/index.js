@@ -14,6 +14,9 @@ import userRoutes from "./routes/users.js"
 import postRoutes from "./routes/posts.js"
 import { createPost } from "./controller/posts.js";
 import { verifyToken } from "./middleware/auth.js"
+import User from "./model/User.js"
+import Post from "./model/Post.js"
+import {users, posts} from "./data/index.js"
 
 
 
@@ -64,6 +67,10 @@ const PORT = process.env.PORT || 6001
 mongoose.connect(process.env.MONGODB_URI , {useNewUrlParser: true, useUnifiedTopology: true})
 .then(() => {
      app.listen(PORT, () => console.log(`Server Port: ${PORT}`))
+
+     /*Update data */
+    //  User.insertMany(users)
+    //  Post.insertMany(posts)
     })
 .catch((error) => console.log(` ${error} did not connect `))
 
