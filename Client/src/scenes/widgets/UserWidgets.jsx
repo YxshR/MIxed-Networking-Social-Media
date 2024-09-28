@@ -77,8 +77,9 @@ const UserWidgets =({ userId, picturePath }) => {
                             </Typography>
                             <Typography color={medium}>{friends.length}</Typography>
                         </Box>
-                        <ManageAccountsOutlined />
                 </FlexBetween>
+                        <ManageAccountsOutlined />
+                        </FlexBetween>
 
                 <Divider />
 
@@ -96,6 +97,8 @@ const UserWidgets =({ userId, picturePath }) => {
 
                 </Box>
 
+                <Divider />
+
                 {/* Third Row */}
 
                 <Box p="1rem 0">
@@ -108,6 +111,8 @@ const UserWidgets =({ userId, picturePath }) => {
                     <Typography color={main} fontWeight="500">{impressions}</Typography>
                     </FlexBetween>
                 </Box>
+
+                <Divider />
 
                 {/* Fourth Row */}
 
@@ -142,7 +147,7 @@ const UserWidgets =({ userId, picturePath }) => {
                     </FlexBetween>
 
                 </Box>
-            </FlexBetween>
+           
         </WidgetWrapper>
     )
 }

@@ -23,7 +23,7 @@ const index = () => {
         <Box flexBasis={isNonMobileScreen ? "42%" : undefined}
           mt={isNonMobileScreen ? undefined : "2rem"}
         >
-          
+          <MyPostWidget picturePath={picturePath} />
         </Box>
         {isNonMobileScreen && (
           <Box flexBasis="26%">
