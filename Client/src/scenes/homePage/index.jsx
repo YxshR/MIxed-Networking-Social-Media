@@ -1,7 +1,11 @@
 import { Box, useMediaQuery } from "@mui/material"
 import Navbar from "../../scenes/navBar/index.jsx"
 import { useSelector } from "react-redux"
-import UserWidgets from "../../scenes/widgets/UserWidgets.jsx"
+import UserWidgets from "../widgets/UserWidgets.jsx"
+import PostsWidget from "../widgets/PostsWidget.jsx"
+import MyPostWidget from "../widgets/MyPostWidget.jsx"
+import { AdUnits } from "@mui/icons-material"
+import AdvertWidget from "../widgets/AdvertWidget.jsx"
 
 
 const index = () => {
@@ -24,9 +28,12 @@ const index = () => {
           mt={isNonMobileScreen ? undefined : "2rem"}
         >
           <MyPostWidget picturePath={picturePath} />
+          <PostsWidget userId={_id} />
         </Box>
         {isNonMobileScreen && (
           <Box flexBasis="26%">
+            <AdvertWidget />
+            <Box m="2rem 0" />
             <UserWidgets userId={_id} picturePath={picturePath} />
           </Box>
         )}
