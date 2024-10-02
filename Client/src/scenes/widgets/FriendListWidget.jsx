@@ -1,8 +1,8 @@
 import{Box,      Typography, useTheme} from "@mui/material"
-import WidgitWapper from "components/WidgitWapper";
+import WidgitWapper from "../../components/WidgitWapper";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setFriends } from "state";
+import { setFriends } from "../../state/index";
 import Friend from "../../components/Friend";
 
 
